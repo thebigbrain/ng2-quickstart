@@ -29,9 +29,9 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss|)$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap', "sass-loader")
       },
       {
         test: /\.css$/,

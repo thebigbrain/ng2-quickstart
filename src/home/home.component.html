@@ -1,0 +1,27 @@
+<main>
+  <ngb-alert [dismissible]="true" [type]="'success'">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+  <h1>Hello from Angular App with Webpack</h1>
+  <img src="../../public/images/angular.png">
+</main>
+<div class="container">
+  <h1>Hero Form</h1>
+  <form>
+    {{diagnostic}}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+    </div>
+    <div class="form-group">
+      <label for="power">Hero Power</label>
+      <select class="form-control" id="power" required [(ngModel)]="model.power" name="power">
+        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+      </select>
+    </div>
+  </form>
+</div>

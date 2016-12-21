@@ -4,7 +4,7 @@ import '../../public/css/styles.css';
 
 @Component({
   selector: 'app',
-  template: '<router-outlet></router-outlet>'
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent { }

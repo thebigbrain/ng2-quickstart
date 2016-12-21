@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark bg-inverse">
+  <a class="navbar-brand" routerLink="/" style="min-width: 120px;">
+    <img class="d-inline-block align-top" width="30" height="30" src="../../public/images/angular.png">Navbar
+  </a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/hero/new" routerLinkActive="active">Create Hero</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/heroes" routerLinkActive="active">Heros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+    </li>
+    <li class="nav-item" ngbDropdown>
+      <a class="nav-link" id="supportedContentDropdown" ngbDropdownToggle>Dropdown</a>
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+  </ul>
+  <form class="form-inline float-xs-right">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</nav>
+<router-outlet></router-outlet>

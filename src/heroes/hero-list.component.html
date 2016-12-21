@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>HEROES</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let hero of heroes | async" [class.selected]="isSelected(hero)" (click)="onSelect(hero)">
+      <span class="tag tag-default tag-pill float-xs-right">{{ hero.id }}</span>
+      <span>{{ hero.name }}</span>
+    </li>
+  </ul>
+</div>
